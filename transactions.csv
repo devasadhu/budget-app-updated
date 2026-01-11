@@ -1,0 +1,206 @@
+description,merchant,amount,category
+Swiggy food delivery order lunch biryani chicken,Swiggy,450,Food & Dining
+Zomato dinner order pizza pasta italian restaurant,Zomato,680,Food & Dining
+McDonald's Connaught Place burger meal fries combo,McDonalds,350,Food & Dining
+Domino's Pizza party order large pepperoni cheese,Dominos,899,Food & Dining
+Starbucks coffee latte cappuccino morning beverage,Starbucks,320,Food & Dining
+Restaurant bill payment dinner celebration party,The Yellow Chilli,2500,Food & Dining
+Cafe Coffee Day CCD breakfast sandwich beverage,CCD,180,Food & Dining
+Food court mall lunch chinese noodles fried rice,Food Court,420,Food & Dining
+KFC chicken bucket meal family wings popcorn,KFC,750,Food & Dining
+Subway sandwich meal combo salad healthy lunch,Subway,280,Food & Dining
+Haldirams restaurant snacks samosa chaat pakora,Haldirams,520,Food & Dining
+Biryani Blues order chicken hyderabadi dum biryani,Biryani Blues,380,Food & Dining
+Pizza Hut dine in family meal stuffed crust,Pizza Hut,1200,Food & Dining
+Barbeque Nation buffet dinner unlimited grill kebab,Barbeque Nation,1800,Food & Dining
+Street food vendor pani puri chaat evening snack,Street Vendor,150,Food & Dining
+Cafe breakfast brunch eggs toast coffee croissant,Cafe Lota,450,Food & Dining
+Burger King whopper combo meal large onion rings,Burger King,340,Food & Dining
+Chaayos tea adda masala chai kulhad beverage,Chaayos,200,Food & Dining
+Baskin Robbins ice cream dessert sundae chocolate,Baskin Robbins,280,Food & Dining
+Bakery fresh bread pastries cake purchase morning,Theobroma,320,Food & Dining
+Dunkin Donuts coffee donuts breakfast takeaway,Dunkin Donuts,390,Food & Dining
+Taco Bell mexican food burrito quesadilla nachos,Taco Bell,460,Food & Dining
+Wow Momo momos dumplings chinese tibetan food,Wow Momo,250,Food & Dining
+Behrouz Biryani order mutton rice dinner family,Behrouz Biryani,650,Food & Dining
+Faasos wrap roll lunch office order online,Faasos,320,Food & Dining
+BigBasket grocery shopping vegetables fruits milk bread eggs,BigBasket,2500,Groceries
+Blinkit instant delivery vegetables milk bread 10min,Blinkit,650,Groceries
+DMart weekly shopping household items detergent rice dal atta,DMart,3200,Groceries
+Reliance Fresh grocery vegetables fruits dairy products,Reliance Fresh,1800,Groceries
+Supermarket monthly groceries atta oil pulses sugar tea,Supermarket,2800,Groceries
+Vegetable market fresh produce organic tomato onion potato,Local Market,600,Groceries
+More Megastore grocery shopping pantry staples household,More,2200,Groceries
+Grofers vegetables fruits dairy milk curd paneer butter,Grofers,1400,Groceries
+Zepto instant delivery midnight groceries snacks beverages,Zepto,850,Groceries
+Spencer's store household groceries cleaning supplies,Spencers,1900,Groceries
+Nature's Basket organic grocery healthy food premium,Nature Basket,2400,Groceries
+Grocery store fruits vegetables dairy daily essentials,Grocery Store,950,Groceries
+Milk booth daily fresh milk delivery subscription,Milk Booth,300,Groceries
+Kirana store monthly ration flour sugar tea coffee,Kirana Shop,1600,Groceries
+Wholesale market bulk groceries wholesale rate discount,Wholesale Market,4500,Groceries
+Dunzo delivery grocery vegetables emergency order quick,Dunzo,480,Groceries
+JioMart online grocery order vegetables fruits staples,JioMart,1950,Groceries
+Vegetable vendor fresh produce daily purchase market,Vegetable Vendor,350,Groceries
+Bread bakery fresh bread pav buns daily morning,Bakery,120,Groceries
+Fruit shop fresh fruits apple banana orange seasonal,Fruit Shop,850,Groceries
+Uber ride to airport cab booking taxi hire,Uber,650,Transportation
+Ola cab office commute daily ride work travel,Ola,280,Transportation
+Petrol pump fuel filling car tank gasoline IOCL,IOCL Petrol Pump,2500,Transportation
+Metro card recharge travel public transport DMRC,Delhi Metro,800,Transportation
+Rapido bike ride quick trip short distance two wheeler,Rapido,120,Transportation
+Parking charges mall underground parking vehicle fee,Mall Parking,80,Transportation
+Toll plaza payment highway expressway FASTag electronic,FASTag Toll,150,Transportation
+Auto rickshaw local ride short distance commute,Auto Rickshaw,60,Transportation
+Bus pass monthly travel card public transport BMTC,BMTC,1200,Transportation
+Train ticket booking railway journey IRCTC reservation,IRCTC,850,Transportation
+Diesel fuel station vehicle refuel pump filling,HP Diesel Pump,3200,Transportation
+Car service maintenance workshop oil change repair,Service Center,4500,Transportation
+Bike petrol motorcycle refuel two wheeler fuel pump,Bharat Petroleum,450,Transportation
+Meru cab airport premium taxi comfortable ride,Meru Cabs,720,Transportation
+Yulu cycle rental eco friendly bike ride short,Yulu,40,Transportation
+BluSmart electric cab eco ride airport booking,BluSmart,580,Transportation
+Namma Yatri auto ride local bangalore transport,Namma Yatri,95,Transportation
+Vogo bike rental scooter hourly self drive,Vogo,180,Transportation
+Bounce scooter rental dockless electric vehicle,Bounce,150,Transportation
+Revv car rental self drive weekend trip vehicle,Revv,2800,Transportation
+Electricity bill payment monthly BSES power consumption,BSES,1800,Bills & Utilities
+Mobile recharge Airtel prepaid plan data calling unlimited,Airtel,499,Bills & Utilities
+Jio broadband fiber internet bill monthly connection,Jio Fiber,999,Bills & Utilities
+Water bill municipal corporation monthly charges,Water Authority,450,Bills & Utilities
+Gas cylinder booking HP gas LPG domestic refill,HP Gas,950,Bills & Utilities
+Internet bill ACT Fibernet broadband monthly subscription,ACT Fibernet,799,Bills & Utilities
+DTH recharge Tata Sky television channels package,Tata Sky,350,Bills & Utilities
+Phone bill postpaid Vodafone mobile monthly plan,Vodafone,650,Bills & Utilities
+WiFi broadband internet connection monthly bill payment,Hathway,899,Bills & Utilities
+Society maintenance charges apartment residential monthly,Housing Society,3500,Bills & Utilities
+Piped gas bill IGL natural gas monthly consumption,IGL,850,Bills & Utilities
+Landline telephone BSNL fixed line monthly charges,BSNL,280,Bills & Utilities
+Mobile postpaid bill Vi unlimited calling data,Vi Postpaid,549,Bills & Utilities
+Cable TV subscription monthly channels package entertainment,Cable TV,250,Bills & Utilities
+Electricity prepaid recharge meter power units purchase,BSES Prepaid,1200,Bills & Utilities
+Sewage charges municipal monthly bill drainage,Municipality,320,Bills & Utilities
+Property tax annual payment house residential,Municipal Corp,8500,Bills & Utilities
+Insurance premium health policy monthly payment,Health Insurance,2500,Bills & Utilities
+LPG gas refill cylinder indane domestic cooking,Indane Gas,975,Bills & Utilities
+Broadband wifi router rental monthly charges internet,ACT Router,149,Bills & Utilities
+Amazon online shopping electronics gadgets prime delivery,Amazon,3500,Shopping
+Flipkart mobile phone smartphone android purchase order,Flipkart,18000,Shopping
+Myntra clothing fashion apparel trendy western wear,Myntra,2200,Shopping
+Nykaa beauty products cosmetics makeup skincare online,Nykaa,1500,Shopping
+Croma electronics appliances television laptop purchase,Croma,8500,Shopping
+Shopping mall clothes footwear accessories brands,Phoenix Mall,4200,Shopping
+Ajio fashion clothing designer brands ethnic fusion,Ajio,1800,Shopping
+Lifestyle store clothing trendy fashion casual formal,Lifestyle,3200,Shopping
+Max Fashion affordable trendy clothes budget friendly,Max Fashion,1600,Shopping
+Westside clothing casual formal ethnic fusion wear,Westside,2800,Shopping
+Meesho online budget shopping affordable clothes home,Meesho,850,Shopping
+Decathlon sports equipment fitness gear athletic shoes,Decathlon,2500,Shopping
+Lenskart eyewear glasses spectacles frames lenses vision,Lenskart,3200,Shopping
+Shoppers Stop premium brands clothing fashion luxury,Shoppers Stop,3800,Shopping
+Local market clothes traditional ethnic saree kurta,Local Market,1200,Shopping
+Zara international fashion trendy western premium,Zara,5500,Shopping
+H&M fashion clothing western trendy affordable,H&M,3200,Shopping
+Pantaloons clothing family fashion all age groups,Pantaloons,2400,Shopping
+Reliance Digital electronics mobiles laptops appliances,Reliance Digital,12000,Shopping
+Vijay Sales electronics home appliances gadgets purchase,Vijay Sales,6800,Shopping
+Netflix subscription monthly streaming movies web series,Netflix,649,Entertainment
+Amazon Prime Video subscription streaming content,Amazon Prime,299,Entertainment
+BookMyShow movie tickets cinema hall PVR booking,BookMyShow,600,Entertainment
+Spotify Premium music streaming playlist subscription,Spotify,119,Entertainment
+PVR cinema movie tickets popcorn combo entertainment,PVR Cinemas,750,Entertainment
+PlayStation Plus subscription online gaming multiplayer,PlayStation,699,Entertainment
+Disney+ Hotstar subscription streaming sports cricket IPL,Disney+ Hotstar,499,Entertainment
+YouTube Premium subscription ad-free videos music,YouTube Premium,129,Entertainment
+Concert tickets music show live performance artist,BookMyShow,2500,Entertainment
+INOX cinema movie multiplex screening latest film,INOX,680,Entertainment
+Steam gaming purchase digital download PC games,Steam,1200,Entertainment
+Wonderla theme park tickets rides adventure family,Wonderla,1500,Entertainment
+Audible audiobooks subscription monthly listening books,Audible,199,Entertainment
+Gaming console purchase PlayStation Xbox Nintendo,Amazon,35000,Entertainment
+Apple Music subscription streaming songs playlist,Apple Music,99,Entertainment
+SonyLIV subscription streaming shows sports movies,SonyLIV,299,Entertainment
+Zee5 premium subscription streaming regional content,Zee5,499,Entertainment
+Voot subscription colors shows bigg boss reality,Voot,299,Entertainment
+BookMyShow play theatre tickets drama comedy show,BookMyShow,850,Entertainment
+Comedy show standup tickets live performance,Insider,1200,Entertainment
+Gym membership monthly fitness workout training center,Fitness First,3000,Health & Fitness
+Doctor consultation medical checkup health diagnosis,Clinic,800,Health & Fitness
+Apollo Pharmacy medicines prescription drugs medical,Apollo Pharmacy,950,Health & Fitness
+1mg online pharmacy medicine order drugs delivery,1mg,650,Health & Fitness
+Yoga classes fitness wellness meditation exercise,Yoga Studio,2500,Health & Fitness
+Cult.fit gym membership workout fitness group classes,CultFit,2800,Health & Fitness
+Hospital medical treatment surgery healthcare admission,Max Hospital,5500,Health & Fitness
+Diagnostic lab blood test reports pathology investigation,PathLabs,1200,Health & Fitness
+Dental checkup teeth cleaning oral health hygiene,Dentist Clinic,1500,Health & Fitness
+Health checkup full body medical screening package,Thyrocare,2500,Health & Fitness
+PharmEasy online medicine order prescription drugs,PharmEasy,780,Health & Fitness
+Gold's Gym membership annual fitness training workout,Gold's Gym,15000,Health & Fitness
+Physiotherapy treatment sessions back pain therapy,Physio Clinic,2000,Health & Fitness
+Nutritionist consultation diet plan weight management,Nutrition Clinic,1500,Health & Fitness
+Mental health therapy counselling psychologist session,Therapy Center,2000,Health & Fitness
+Eye checkup vision test optometry glasses prescription,Eye Clinic,600,Health & Fitness
+Dermatologist consultation skin treatment acne therapy,Skin Clinic,1200,Health & Fitness
+Veterinary clinic pet dog cat health checkup,Pet Clinic,1500,Health & Fitness
+Medical insurance premium health policy family floater,Insurance,8500,Health & Fitness
+Fitness equipment dumbbells yoga mat home workout,Decathlon,3500,Health & Fitness
+Udemy online course programming web development learning,Udemy,499,Education
+Coursera subscription professional certificate specialization,Coursera,3999,Education
+Crossword bookstore academic textbooks study books,Crossword,1200,Education
+Coaching center tuition fees entrance exam preparation,Coaching Institute,8000,Education
+Amazon Kindle ebooks digital books reading subscription,Kindle Store,350,Education
+Unacademy subscription competitive exams UPSC learning,Unacademy,2500,Education
+School fees annual academic tuition education payment,School,45000,Education
+Stationery shop notebooks pens pencils study material,Stationery Store,650,Education
+College fees semester tuition education university,College,35000,Education
+Online certification course professional development skill,edX,2500,Education
+Language learning app subscription duolingo premium,Duolingo,499,Education
+Music classes guitar piano vocal lessons learning,Music Academy,3000,Education
+Art supplies painting drawing sketching materials craft,Art Store,1800,Education
+Library membership annual books reading subscription,Library,500,Education
+Coaching institute test series mock exams practice,Test Series,1500,Education
+Educational toys kids learning development games,FirstCry,2200,Education
+Professional course MBA CA preparation study material,Institute,12000,Education
+Workshop seminar conference registration learning event,Conference,3500,Education
+Subscription boxes learning science experiments kids,Flintobox,999,Education
+Research papers journal subscription academic articles,JSTOR,1200,Education
+Flight tickets domestic travel Mumbai Delhi booking,IndiGo,5500,Travel
+Hotel booking accommodation stay vacation resort,OYO,3200,Travel
+Bus tickets intercity travel sleeper booking online,RedBus,850,Travel
+Travel insurance trip coverage international domestic,Insurance,1200,Travel
+Foreign exchange currency conversion USD EUR travel,Forex,15000,Travel
+Airbnb vacation rental homestay booking accommodation,Airbnb,4500,Travel
+MakeMyTrip holiday package tour travel booking,MakeMyTrip,25000,Travel
+Visa application fees passport travel documentation,VFS Global,8500,Travel
+Travel backpack luggage suitcase bag purchase,Amazon,3200,Travel
+Go Ibibo hotel flight booking travel package deal,GoIbibo,12000,Travel
+Salon haircut hair styling grooming men women,Salon,450,Personal Care
+Spa massage therapy relaxation wellness treatment,Spa,2500,Personal Care
+Beauty parlor facial waxing grooming services,Parlor,1200,Personal Care
+Urban Company home salon beauty services grooming,Urban Company,850,Personal Care
+Perfume cologne fragrance deodorant purchase cosmetic,Shoppers Stop,1800,Personal Care
+Laundry dry cleaning clothes ironing wash services,Laundry,450,Personal Care
+Grooming products shampoo conditioner body wash care,Nykaa,680,Personal Care
+Tattoo studio body art permanent tattoo design,Tattoo Studio,5000,Personal Care
+Nail salon manicure pedicure nail art polish,Nail Salon,800,Personal Care
+Barber shop shave beard trim men's grooming,Barber,200,Personal Care
+Mutual fund SIP investment monthly systematic plan,Mutual Fund,5000,Investments
+Stock market equity shares trading purchase investment,Zerodha,15000,Investments
+Fixed deposit FD investment bank savings scheme,Bank FD,50000,Investments
+Gold purchase jewelry investment digital gold saving,Digital Gold,10000,Investments
+PPF contribution public provident fund retirement saving,PPF Account,25000,Investments
+National Pension System NPS retirement investment,NPS,3000,Investments
+Life insurance premium investment policy payment,LIC,12000,Investments
+Real estate property investment down payment purchase,Real Estate,500000,Investments
+Cryptocurrency bitcoin ethereum investment trading purchase,WazirX,20000,Investments
+Bonds government securities investment fixed income,Government Bonds,100000,Investments
+Gift purchase birthday anniversary celebration present,Amazon,2500,Other
+Charity donation NGO contribution social cause help,NGO,1000,Other
+Pet supplies dog cat food toys accessories care,Petshop,1500,Other
+Home repair plumber electrician maintenance work service,Maintenance,2000,Other
+Furniture purchase table chair bed home decor,IKEA,15000,Other
+Plant nursery gardening plants pots seeds home garden,Nursery,800,Other
+Electronics repair mobile laptop service center fix,Repair Center,1200,Other
+Moving charges packers movers relocation home shifting,Packers Movers,8500,Other
+Legal fees lawyer consultation documentation services,Legal Services,5000,Other
+ATM withdrawal cash money bank transaction,ATM,3000,Other
