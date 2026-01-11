@@ -1,5 +1,5 @@
 // SmartBudget/app/add-transaction-premium.tsx
-// OPTIMIZED UX FLOW: Description FIRST → AI predicts category → Amount → Confirm
+// COMPLETE UPDATED VERSION - ML-First Flow with Debugging
 import React, { useState, useEffect } from 'react';
 import { 
     View, 
@@ -59,13 +59,34 @@ export default function PremiumAddTransactionScreen() {
 
   const availableCategories = CATEGORIES;
 
-  // Check ML service status on mount
+  // Initialize ML service on mount
   useEffect(() => {
-    console.log('\n🔍 ========== ADD TRANSACTION SCREEN MOUNTED ==========');
-    const stats = mlCategorizationService.getStats();
-    console.log('ML Status:', stats.isReady ? '✅ Ready' : '❌ Not Ready');
-    console.log('Training examples:', stats.trainingCount);
-    console.log('🔍 =================================================\n');
+    const initML = async () => {
+      console.log('\n🔍 ========== ADD TRANSACTION SCREEN MOUNTED ==========');
+      try {
+        await mlCategorizationService.initialize(user?.uid || 'demo');
+        const stats = mlCategorizationService.getStats();
+        console.log('ML Status:', stats.isReady ? '✅ Ready' : '❌ Not Ready');
+        console.log('Training examples:', stats.trainingCount);
+        console.log('Vocabulary size:', stats.vocabularySize);
+        console.log('Model source:', stats.modelSource);
+        
+        // Test predictions
+        if (stats.isReady) {
+          console.log('\n🧪 Testing ML predictions...');
+          const testCases = ['Uber ride', 'Swiggy food', 'Myntra shopping'];
+          for (const test of testCases) {
+            const pred = await mlCategorizationService.predict(test);
+            console.log(`  "${test}" → ${pred.category} (${(pred.confidence * 100).toFixed(0)}%)`);
+          }
+        }
+      } catch (error) {
+        console.error('❌ ML init failed:', error);
+      }
+      console.log('🔍 =================================================\n');
+    };
+    
+    initML();
   }, []);
 
   // ML Prediction Effect - Triggers as you type description
@@ -84,10 +105,15 @@ export default function PremiumAddTransactionScreen() {
             amount ? parseFloat(amount) : undefined
           );
 
-          console.log('✅ Prediction:', pred.category, `(${(pred.confidence * 100).toFixed(0)}%)`);
+          console.log('✅ Prediction:', pred.category, `(${(pred.confidence * 100).toFixed(0)}%) - Method: ${pred.method}`);
+          
+          if (pred.topFeatures && pred.topFeatures.length > 0) {
+            console.log('   Top features:', pred.topFeatures.map(f => f.word).join(', '));
+          }
+          
           setMlPrediction(pred);
           
-          // Auto-set category if NO category selected yet
+          // Auto-set category if confidence is high and NO category selected yet
           if (pred.confidence > 0.6 && !category) {
             console.log(`🎯 Auto-setting category: ${pred.category}`);
             setCategory(pred.category);
@@ -133,6 +159,15 @@ export default function PremiumAddTransactionScreen() {
       const transactionCategory = type === 'credit' ? 'Income' : category;
       const finalAmount = type === 'debit' ? -Math.abs(parseFloat(amount)) : Math.abs(parseFloat(amount));
       
+      console.log('\n💾 Saving transaction:', {
+        description: description.trim() || transactionCategory,
+        category: transactionCategory,
+        amount: finalAmount,
+        type,
+        mlPrediction: mlPrediction?.category,
+        mlConfidence: mlPrediction?.confidence
+      });
+      
       await saveToStore({ 
         amount: finalAmount,
         category: transactionCategory,
@@ -141,9 +176,23 @@ export default function PremiumAddTransactionScreen() {
         date: date,
       }, user.uid);
       
+      // Learn from this transaction if ML predicted correctly
+      if (mlPrediction && mlPrediction.category !== transactionCategory) {
+        console.log('📚 Learning from correction:', mlPrediction.category, '→', transactionCategory);
+        await mlCategorizationService.learnFromCorrection(
+          description,
+          undefined,
+          parseFloat(amount),
+          mlPrediction.category,
+          transactionCategory,
+          user.uid
+        );
+      }
+      
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       router.back(); 
     } catch (error) {
+      console.error('❌ Save failed:', error);
       Alert.alert('Error', 'Failed to save transaction.');
     } finally {
       setLoading(false);

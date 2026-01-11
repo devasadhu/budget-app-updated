@@ -28,7 +28,7 @@ const QUICK_PROMPTS = [
 ];
 
 // 🔑 GET YOUR FREE API KEY: https://makersuite.google.com/app/apikey
-const GEMINI_API_KEY = 'AIzaSyC5RhR9OPIOXr56gt1nk6t_gsHXmyfiVy4'; // Replace with your key
+const GEMINI_API_KEY = 'your-gemini-api-key'; // Replace with your key
 
 export default function AIBuddyChat() {
   const { isDarkMode } = useThemeStore();
@@ -169,7 +169,7 @@ HOW TO RESPOND:
     } catch (error: any) {
       console.error('AI Error:', error);
       
-      if (GEMINI_API_KEY === 'AIzaSyC5RhR9OPIOXr56gt1nk6t_gsHXmyfiVy4') {
+      if (GEMINI_API_KEY === 'your-gemini-api-key') {
         return "⚠️ API key not configured!\n\nGet your FREE Gemini API key:\n1. Visit https://makersuite.google.com/app/apikey\n2. Click 'Create API Key'\n3. Replace the key in buddy-ai.tsx\n\nIt takes 30 seconds and it's completely free! 🎉";
       }
       

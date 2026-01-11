@@ -176,7 +176,7 @@ const PredictionCard: React.FC<PredictionCardProps> = ({
       <View style={styles.predictionAmounts}>
         <View style={styles.predictionAmount}>
           <Text style={[styles.predictionLabel, { color: theme.subtext }]}>Predicted</Text>
-          <Text style={[styles.predictionValue, { color: '#0EA5E9' }]}>
+          <Text style={[styles.predictionValue, { color: theme.tint }]}>
             ₹{prediction.predictedAmount.toLocaleString('en-IN')}
           </Text>
         </View>
@@ -218,7 +218,7 @@ const PredictionCard: React.FC<PredictionCardProps> = ({
         onPress={() => onApply(prediction)}
       >
         <LinearGradient
-          colors={isDarkMode ? GRADIENTS.primaryDark : GRADIENTS.primary}
+          colors={theme.primaryGradient}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
           style={styles.applyButtonGradient}
@@ -379,7 +379,7 @@ const SummaryHeader: React.FC<SummaryHeaderProps> = ({
 
   return (
     <LinearGradient
-      colors={isDarkMode ? GRADIENTS.primaryDark : GRADIENTS.primary}
+      colors={theme.primaryGradient}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
       style={[
@@ -601,7 +601,7 @@ export default function PremiumBudgetScreen() {
             onPress={handleAddBudget}
           >
             <LinearGradient
-              colors={isDarkMode ? GRADIENTS.primaryDark : GRADIENTS.primary}
+              colors={theme.primaryGradient}
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 0 }}
               style={styles.addButtonGradient}
@@ -662,8 +662,7 @@ export default function PremiumBudgetScreen() {
                 ]}
               >
                 <LinearGradient
-                  colors={isDarkMode ? GRADIENTS.primaryDark : GRADIENTS.primary}
-                  start={{ x: 0, y: 0 }}
+                  colors={theme.primaryGradient}
                   end={{ x: 1, y: 1 }}
                   style={styles.emptyIcon}
                 >

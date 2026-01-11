@@ -1,41 +1,42 @@
 // app/(auth)/signup.tsx
 "use client"
 
+import { Ionicons } from "@expo/vector-icons"
+import { router } from "expo-router"
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
+import { doc, setDoc } from "firebase/firestore"
 import React, { useState } from "react"
 import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  StyleSheet,
+  ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
-  ActivityIndicator,
-  Alert,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View
 } from "react-native"
-import { createUserWithEmailAndPassword } from "firebase/auth"
-import { doc, setDoc } from "firebase/firestore"
-import { auth, db } from "../_lib/firebase" 
-import { router } from "expo-router"
-import { useThemeStore } from "../_lib/useThemeStore"
 import { Colors } from "../../constants/theme"
-import { Ionicons } from "@expo/vector-icons"
+import { auth, db } from "../_lib/firebase"
+import { useThemeStore } from "../_lib/useThemeStore"
 
 export default function SignupScreen() {
   const { isDarkMode } = useThemeStore();
   const theme = isDarkMode ? Colors.dark : Colors.light;
 
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+  const [nameFocused, setNameFocused] = useState(false)
   const [emailFocused, setEmailFocused] = useState(false)
   const [passwordFocused, setPasswordFocused] = useState(false)
 
   const handleSignup = async () => {
     setError("")
-    if (!email || !password) {
+    if (!name || !email || !password) {
       setError("Please fill in all fields")
       return
     }
@@ -51,17 +52,23 @@ export default function SignupScreen() {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password)
       const user = userCredential.user;
 
-      // 2. Initialize Firestore User Document
+      // 2. Update Firebase Auth profile with name
+      await updateProfile(user, {
+        displayName: name,
+      });
+
+      // 3. Create Firestore User Document with proper name
       await setDoc(doc(db, "users", user.uid), {
         userId: user.uid,
         email: user.email,
-        displayName: email.split('@')[0], 
+        displayName: name,
+        fullName: name,
         createdAt: new Date().toISOString(),
         monthlyBudget: 0,
         profileImage: null,
       });
 
-      // 3. Navigation handled by RootLayout Auth listener, 
+      // 4. Navigation handled by RootLayout Auth listener, 
       // but we use replace to ensure the stack is cleared.
       router.replace("/(tabs)"); 
       
@@ -92,6 +99,25 @@ export default function SignupScreen() {
 
         {/* Input Fields */}
         <View style={[styles.formContainer, { backgroundColor: theme.card }]}>
+          {/* Name Field - NEW */}
+          <View style={styles.inputWrapper}>
+            <Text style={[styles.label, { color: theme.subtext }]}>Full Name</Text>
+            <TextInput
+              style={[
+                styles.input, 
+                { color: theme.text, backgroundColor: isDarkMode ? theme.background : '#F8FAFC', borderColor: theme.border },
+                nameFocused && { borderColor: theme.tint }
+              ]}
+              placeholder="John Doe"
+              placeholderTextColor={theme.subtext}
+              onChangeText={setName}
+              onFocus={() => setNameFocused(true)}
+              onBlur={() => setNameFocused(false)}
+              autoCapitalize="words"
+              editable={!loading}
+            />
+          </View>
+
           <View style={styles.inputWrapper}>
             <Text style={[styles.label, { color: theme.subtext }]}>Email Address</Text>
             <TextInput

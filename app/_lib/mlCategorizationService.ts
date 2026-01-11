@@ -558,6 +558,60 @@ class MLCategorizationService {
     }
   }
 
+  // Add this to your ML service to debug what's happening
+
+// 1. ADD THIS METHOD to MLCategorizationService class
+async debugPrediction(description: string): Promise<void> {
+  console.log('\n🔍 ========== DEBUGGING PREDICTION ==========');
+  console.log('Input:', description);
+  
+  // Check if model is ready
+  console.log('Model Ready?', this.isReady);
+  console.log('Training Examples:', this.trainingExamples.length);
+  console.log('Vocabulary Size:', this.vectorizer.getVocabularySize());
+  
+  // Prepare text
+  const text = this.prepareText(description, undefined, undefined);
+  console.log('Prepared Text:', text);
+  
+  // Get vector
+  const vector = this.vectorizer.transform(text);
+  console.log('Vector Features:', Object.keys(vector).length);
+  console.log('Top Vector Features:', 
+    Object.entries(vector)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([word, score]) => `${word}: ${score.toFixed(3)}`)
+  );
+  
+  // Get prediction
+  const { category, confidence, probabilities } = this.classifier.predict(vector);
+  
+  console.log('\n📊 All Probabilities:');
+  Object.entries(probabilities)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([cat, prob]) => {
+      console.log(`  ${cat}: ${(prob * 100).toFixed(1)}%`);
+    });
+  
+  console.log('\n✅ Winner:', category, `(${(confidence * 100).toFixed(1)}%)`);
+  
+  // Check training data distribution
+  const categoryCounts: Record<string, number> = {};
+  this.trainingExamples.forEach(ex => {
+    categoryCounts[ex.category] = (categoryCounts[ex.category] || 0) + 1;
+  });
+  
+  console.log('\n📚 Training Data Distribution:');
+  Object.entries(categoryCounts)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([cat, count]) => {
+      console.log(`  ${cat}: ${count} examples`);
+    });
+  
+  console.log('🔍 ==========================================\n');
+}
+
   // --------------------------------------------------------------------------
   // SYNTHETIC TRAINING DATA
   // --------------------------------------------------------------------------

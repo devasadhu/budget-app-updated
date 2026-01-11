@@ -10,7 +10,7 @@ import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from "react-native";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDf1fHXBe6Tw3hEXPh3dYuNbcin6k2h0xY",
+  apiKey: "your-firebase-api-key",
   authDomain: "smartbudget-53476.firebaseapp.com",
   projectId: "smartbudget-53476",
   storageBucket: "smartbudget-53476.firebasestorage.app",

@@ -8,18 +8,18 @@ export const Colors = {
     subtext: '#64748B',
     border: '#E2E8F0',
     
-    // Premium gradients
-    primaryGradient: ['#6366F1', '#8B5CF6', '#A855F7'],
-    successGradient: ['#10B981', '#059669'],
-    dangerGradient: ['#EF4444', '#DC2626'],
-    warningGradient: ['#F59E0B', '#D97706'],
-    infoGradient: ['#0EA5E9', '#3B82F6'],
+    // Premium gradients - CHANGED TO BLUE
+    primaryGradient: ['#3B82F6', '#2563EB', '#1D4ED8'] as const, // Blue gradient
+    successGradient: ['#10B981', '#059669'] as const,
+    dangerGradient: ['#EF4444', '#DC2626'] as const,
+    warningGradient: ['#F59E0B', '#D97706'] as const,
+    infoGradient: ['#0EA5E9', '#3B82F6'] as const,
     
     // Glass morphism
     glassBackground: 'rgba(255, 255, 255, 0.7)',
     glassBorder: 'rgba(255, 255, 255, 0.2)',
     
-    // Shadows
+    // Shadows - UPDATED TO BLUE
     shadow: {
       small: {
         shadowColor: '#0F172A',
@@ -29,7 +29,7 @@ export const Colors = {
         elevation: 2,
       },
       medium: {
-        shadowColor: '#6366F1',
+        shadowColor: '#3B82F6', // Blue shadow
         shadowOffset: { width: 0, height: 8 },
         shadowOpacity: 0.15,
         shadowRadius: 16,
@@ -44,17 +44,17 @@ export const Colors = {
       }
     },
     
-    // Category colors
+    // Category colors - UPDATED SOME TO BLUE THEME
     categories: {
-      Food: { color: '#F59E0B', gradient: ['#F59E0B', '#EF4444'] },
-      Travel: { color: '#0EA5E9', gradient: ['#0EA5E9', '#8B5CF6'] },
-      Shopping: { color: '#EC4899', gradient: ['#EC4899', '#F97316'] },
-      Bills: { color: '#8B5CF6', gradient: ['#8B5CF6', '#6366F1'] },
-      Entertainment: { color: '#EF4444', gradient: ['#EF4444', '#EC4899'] },
-      Other: { color: '#64748B', gradient: ['#64748B', '#475569'] },
+      Food: { color: '#F59E0B', gradient: ['#F59E0B', '#F97316'] as const },
+      Travel: { color: '#0EA5E9', gradient: ['#0EA5E9', '#3B82F6'] as const },
+      Shopping: { color: '#EC4899', gradient: ['#EC4899', '#F97316'] as const },
+      Bills: { color: '#3B82F6', gradient: ['#3B82F6', '#2563EB'] as const }, // Blue
+      Entertainment: { color: '#8B5CF6', gradient: ['#8B5CF6', '#7C3AED'] as const },
+      Other: { color: '#64748B', gradient: ['#64748B', '#475569'] as const },
     },
     
-    tint: '#6366F1',
+    tint: '#3B82F6', // CHANGED TO BLUE
   },
   
   dark: {
@@ -65,18 +65,18 @@ export const Colors = {
     subtext: '#94A3B8',
     border: '#334155',
     
-    // Premium gradients
-    primaryGradient: ['#4F46E5', '#7C3AED', '#C084FC'],
-    successGradient: ['#10B981', '#059669'],
-    dangerGradient: ['#EF4444', '#DC2626'],
-    warningGradient: ['#F59E0B', '#D97706'],
-    infoGradient: ['#0EA5E9', '#3B82F6'],
+    // Premium gradients - CHANGED TO BLUE
+    primaryGradient: ['#2563EB', '#1D4ED8', '#1E40AF'] as const, // Darker blue gradient
+    successGradient: ['#10B981', '#059669'] as const,
+    dangerGradient: ['#EF4444', '#DC2626'] as const,
+    warningGradient: ['#F59E0B', '#D97706'] as const,
+    infoGradient: ['#0EA5E9', '#3B82F6'] as const,
     
     // Glass morphism
     glassBackground: 'rgba(30, 41, 59, 0.7)',
     glassBorder: 'rgba(148, 163, 184, 0.1)',
     
-    // Shadows
+    // Shadows - UPDATED TO BLUE
     shadow: {
       small: {
         shadowColor: '#000000',
@@ -86,7 +86,7 @@ export const Colors = {
         elevation: 2,
       },
       medium: {
-        shadowColor: '#4F46E5',
+        shadowColor: '#2563EB', // Blue shadow
         shadowOffset: { width: 0, height: 8 },
         shadowOpacity: 0.25,
         shadowRadius: 16,
@@ -101,19 +101,19 @@ export const Colors = {
       }
     },
     
-    // Category colors (same as light)
+    // Category colors (updated to blue theme)
     categories: {
-      Food: { color: '#F59E0B', gradient: ['#F59E0B', '#EF4444'] },
-      Travel: { color: '#0EA5E9', gradient: ['#0EA5E9', '#8B5CF6'] },
-      Shopping: { color: '#EC4899', gradient: ['#EC4899', '#F97316'] },
-      Bills: { color: '#8B5CF6', gradient: ['#8B5CF6', '#6366F1'] },
-      Entertainment: { color: '#EF4444', gradient: ['#EF4444', '#EC4899'] },
-      Other: { color: '#64748B', gradient: ['#64748B', '#475569'] },
+      Food: { color: '#F59E0B', gradient: ['#F59E0B', '#F97316'] as const },
+      Travel: { color: '#0EA5E9', gradient: ['#0EA5E9', '#3B82F6'] as const },
+      Shopping: { color: '#EC4899', gradient: ['#EC4899', '#F97316'] as const },
+      Bills: { color: '#3B82F6', gradient: ['#3B82F6', '#2563EB'] as const }, // Blue
+      Entertainment: { color: '#8B5CF6', gradient: ['#8B5CF6', '#7C3AED'] as const },
+      Other: { color: '#64748B', gradient: ['#64748B', '#475569'] as const },
     },
     
-    tint: '#818CF8',
+    tint: '#60A5FA', // CHANGED TO LIGHT BLUE
   }
-};
+} as const;
 
 export const AnimationPresets = {
   springy: {
@@ -129,4 +129,4 @@ export const AnimationPresets = {
     type: 'timing',
     duration: 200,
   },
-};
+} as const;
