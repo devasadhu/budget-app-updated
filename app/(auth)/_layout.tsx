@@ -1,7 +1,7 @@
 //app/(auth)/_layout.tsx
 import { Stack } from 'expo-router';
-import { useThemeStore } from '../_lib/useThemeStore';
 import { Colors } from '../../constants/theme';
+import { useThemeStore } from '../_lib/useThemeStore';
 
 export default function AuthLayout() {
   const { isDarkMode } = useThemeStore();
